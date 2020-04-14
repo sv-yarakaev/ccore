@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+
+int
 main(argc, argv) /* int main(int argc, char** argv) */
 int argc;
 char *argv[];
