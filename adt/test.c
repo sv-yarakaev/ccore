@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include "new.h"
+/* #include "new.h" */
 #include "object.h"
+
 #include "set.h"
 
 
