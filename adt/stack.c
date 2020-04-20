@@ -21,7 +21,7 @@ T Stack_new(void) {
     return stk;
 }
 
-int Stack_empty(T stk) {
+int Stack_empty(const struct T *stk) {
     assert(stk);
     return stk->count == 0;
 }
