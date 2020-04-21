@@ -50,6 +50,11 @@ extern Except_Frame *Except_stack;
                         Except_flag = Except_finalized;
 
 
+#define END_TRY \
+                    <pop if this chunk follows S 57> \
+                    } if (Except_flag == Except_raised) RERAISE; \
+                    } while (0)
+
 #define RETURN switch(Except_stack = Except_stack->prev, 0) default: return
 
 
