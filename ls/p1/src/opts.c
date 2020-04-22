@@ -29,14 +29,14 @@ struct option longopts[] = {
 
 int main(int argc, char *argv[]) {
     int oc;
-    int c;
+    /*int c;
     char *b_opt_arg;
+    */
     while ((oc = getopt_long(argc, argv, ":ahvf:u::W;", longopts, NULL)) != -1 ) {
         switch (oc) {
             case 'a':
                 do_all = 1;
                 break;
-
             case 'f':
                 myfile = optarg;
                 break;
@@ -65,8 +65,5 @@ int main(int argc, char *argv[]) {
             break;
         }
     }
-    
-    
-
     return 0;
 }
