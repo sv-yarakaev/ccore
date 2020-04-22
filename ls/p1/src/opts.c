@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     int oc;
     char *b_opt_arg;
     while ((oc = getopt(argc, argv, "ab:")) != -1 ) {
-        switch (oc) {
+	 switch (oc){
             case 'a':
                 printf("Parsing a optins\n");
                 break;
@@ -18,9 +18,11 @@ int main(int argc, char *argv[]) {
                 printf("Parsing -b with arg %s\n", b_opt_arg);
                 break;
             case ':':
-                printf("Maybe some error\n");
+                fprintf(stderr, "%s: option -%c requires an argument\n", argv[0], optopt);
+                break;
             case '?' :
             default:
+                fprintf(stderr, "%s: option `-%c is invalid: ignored\n", argv[0], optopt); 
                 return -1;
         }
     }
